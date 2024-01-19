@@ -9,6 +9,7 @@ import {
   doc,
 } from "firebase/firestore";
 import { db } from "./firebase";
+import Link from "next/link";
 
 export default function Home() {
   const [items, setItems] = useState([]);
@@ -75,7 +76,7 @@ export default function Home() {
           />
           <button
             onClick={addItem}
-            className="text-white bg-blue-500 hover:bg-blue-600 p-2 sm:w-full md:w-1/3 lg:w-1/3 sm:mt-2 md:mt-0 lg:mt-0 sm:ml-0 md:ml-4 lg:ml-4 text-sm sm:text-xl md:text-xl lg:text-xl rounded-md"
+            className="text-white bg-blue-500 hover:bg-blue-600 p-2 sm:w-full md:w-1/3 lg:w-1/3 sm:mt-2 md:mt-0 lg:mt-0 sm:ml-0 md:ml-4 lg:ml-4 text-sm sm:text-xl md:text-xl lg:text-l rounded-md"
             type="submit"
           >
             +
@@ -110,6 +111,11 @@ export default function Home() {
             <span className="text-lg font-semibold">${total}</span>
           </div>
         )}
+        <Link legacyBehavior href="/home">
+          <a className="text-white bg-blue-500 hover:bg-blue-600 p-2 sm:w-full md:w-1/3 lg:w-1/3 sm:mt-2 md:mt-0 lg:mt-0 sm:ml-0 md:ml-4 lg:ml-4 text-sm sm:text-xl md:text-xl lg:text-l rounded-md">
+            Back to Previous Page
+          </a>
+        </Link>
       </div>
     </main>
   );
