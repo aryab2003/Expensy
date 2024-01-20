@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Profile = () => {
   return (
@@ -17,6 +18,11 @@ const Profile = () => {
             websites.
           </p>
         </div>
+        <Link legacyBehavior href="/" passHref>
+          <a className="text-blue-500 text-lg md:text-xl font-semibold border-b border-blue-500 hover:border-blue-700 pb-1 block mb-4">
+            Manage Your Expenses on Expensy
+          </a>
+        </Link>
       </div>
     </div>
   );
